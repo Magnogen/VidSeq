@@ -1,0 +1,18 @@
+easetype 'cubic'
+background ::
+  fill: #015
+
+text ::
+  direction: 'ltr'
+  fill: #2ff
+  stroke: #fff0
+  font: 'Helvetica'
+  decoration: 'none'
+  transformation: 'none'
+  letter_spacing: 0
+  line_height: 1.2
+  word_spacing: 0
+  shadow_color: #fff0
+  shadow_x: 0
+  shadow_y: 0
+  shadow_blur: 0
