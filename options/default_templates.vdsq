@@ -1,0 +1,36 @@
+text = renderer ::
+    content: ''
+    x: 0
+    y: 0
+    color: #000f
+    align: 'center'
+    baseline: 'middle'
+    font: 'serif'
+    italic: true
+    bold: true
+    size: 1
+    line_gap: 1.2
+    render: {
+        let style = '';
+        if (this.italic) style += 'italic ';
+        else style += 'normal ';
+        style += 'normal ';
+        if (this.bold) style += '700 ';
+        else style += '400 ';
+        style += (this.size * 24) + 'px ';
+        style += '/' + this.line_gap + ' ';
+        style += this.font;
+
+        CONTEXT.fillStyle = this.color;
+        CONTEXT.font = style;
+        CONTEXT.textAlign = this.align;
+        CONTEXT.textBaseline = this.baseline
+        CONTEXT.fillText(this.content, this.x, this.y);
+    }
+
+background = renderer ::
+    color: #ffff
+    render: {
+        CONTEXT.fillStyle = this.color;
+        CONTEXT.fillRect(-1, -1, 1, 1);
+    }
