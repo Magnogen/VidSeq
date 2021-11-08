@@ -2,7 +2,9 @@ text = ::
     content: ''
     x: 0
     y: 0
-    color: #000f
+    fill: #000f
+    stroke: #0000
+    width: 1
     align: 'center'
     baseline: 'middle'
     font: 'serif'
@@ -21,16 +23,41 @@ text = ::
         style += '/' + this.line_gap + ' ';
         style += this.font;
 
-        CONTEXT.fillStyle = this.color;
+        CONTEXT.fillStyle = this.fill;
+        CONTEXT.strokeStyle = this.stroke;
         CONTEXT.font = style;
         CONTEXT.textAlign = this.align;
-        CONTEXT.textBaseline = this.baseline
+        CONTEXT.textBaseline = this.baseline;
         CONTEXT.fillText(this.content, this.x, this.y);
+        CONTEXT.strokeWidth = this.width;
+        CONTEXT.strokeText(this.content, this.x, this.y);
     }
 
 background = ::
-    color: #ffff
+    fill: #ffff
+    stroke: #fff0
     render: {
-        CONTEXT.fillStyle = this.color;
+        CONTEXT.fillStyle = this.fill;
+        CONTEXT.strokeStyle = this.stroke;
+        CONTEXT.strokeWidth = this.width;
         CONTEXT.fillRect(-1, -1, 1, 1);
+        CONTEXT.strokeRect(-1, -1, 1, 1);
+    }
+
+circle = ::
+    x: 0
+    y: 0
+    r: 1
+    fill: #000f
+    stroke: #0000
+    width: 1
+    render: {
+        CONTEXT.fillStyle = this.fill;
+        CONTEXT.lineWidth = this.width;
+        CONTEXT.strokeStyle = this.stroke;
+        
+        CONTEXT.beginPath();
+        CONTEXT.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+        CONTEXT.fill();
+        CONTEXT.stroke();
     }
