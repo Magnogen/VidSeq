@@ -1,4 +1,4 @@
-text = renderer ::
+text = ::
     content: ''
     x: 0
     y: 0
@@ -28,7 +28,7 @@ text = renderer ::
         CONTEXT.fillText(this.content, this.x, this.y);
     }
 
-background = renderer ::
+background = ::
     color: #ffff
     render: {
         CONTEXT.fillStyle = this.color;
