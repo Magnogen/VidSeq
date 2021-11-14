@@ -1,0 +1,66 @@
+text = <
+    content: ''
+    x: 0
+    y: 0
+    fill: #000f
+    stroke: #0000
+    width: 1
+    align: 'center'
+    baseline: 'middle'
+    font: 'serif'
+    italic: true
+    bold: true
+    size: 1
+    line_gap: 1.2
+    render: {
+        let style = '';
+        if (this.italic) style += 'italic ';
+        else style += 'normal ';
+        style += 'normal ';
+        if (this.bold) style += '700 ';
+        else style += '400 ';
+        style += (this.size * 24) + 'px ';
+        style += '/' + this.line_gap + ' ';
+        style += this.font;
+
+        CANVAS.fillStyle = this.fill;
+        CANVAS.strokeStyle = this.stroke;
+        CANVAS.font = style;
+        CANVAS.textAlign = this.align;
+        CANVAS.textBaseline = this.baseline;
+        CANVAS.fillText(this.content, this.x, this.y);
+        CANVAS.strokeWidth = this.width;
+        CANVAS.strokeText(this.content, this.x, this.y);
+    }
+>
+
+background = <
+    fill: #ffff
+    stroke: #fff0
+    render: {
+        CANVAS.fillStyle = this.fill;
+        CANVAS.strokeStyle = this.stroke;
+        CANVAS.strokeWidth = this.width;
+        CANVAS.fillRect(-1, -1, 1, 1);
+        CANVAS.strokeRect(-1, -1, 1, 1);
+    }
+>
+
+circle = <
+    x: 0
+    y: 0
+    r: 1
+    fill: #000f
+    stroke: #0000
+    width: 1
+    render: {
+        CANVAS.fillStyle = this.fill;
+        CANVAS.lineWidth = this.width;
+        CANVAS.strokeStyle = this.stroke;
+        
+        CANVAS.beginPath();
+        CANVAS.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+        CANVAS.fill();
+        CANVAS.stroke();
+    }
+>
