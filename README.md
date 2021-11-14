@@ -19,7 +19,7 @@ bg = background <     // create a variable and assign it the properties of a bac
 >
 ```
 
-That program will just draw a solid, dark blue background onto the screen, but you can change any value leter on using a transitional operator:
+That program will just draw a solid, dark blue background onto the screen, but you can change any value later on using a transitional operator:
 
 ```
 bg = background < fill: #001155 >
