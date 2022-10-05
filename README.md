@@ -1,4 +1,5 @@
 # VidSeq
+###### A **Vid**eo **Seq**uencing language https://magnogen.net/VidSeq
 
 VidSeq is a programming language I'm (very badly) working on, to help with the creation of videos.
 
