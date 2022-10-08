@@ -152,16 +152,5 @@ VidSeq = (exports = {}) => {
         return (1-T)*a + T*b;
     }
 
-return exports;
+    return exports;
 };
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
