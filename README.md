@@ -1,7 +1,7 @@
 # VidSeq
 ###### A *Vid*eo *Seq*uencing language https://magnogen.net/VidSeq
 
-VidSeq is a programming language I'm (very badly) working on, to help with the creation of videos.
+VidSeq is a programming language I'm working on, to help with the creation of videos.
 
 It produces outputs that can be similar in style to a host of YouTubers, including:
 - [TodePond](https://www.youtube.com/c/TodePond)
